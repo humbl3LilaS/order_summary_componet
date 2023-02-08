@@ -1,0 +1,186 @@
+/*font import:
+  font-family: 'Red Hat Display', sans-serif;
+  weight : 500, 700, 900
+*/
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/*custom variables */
+:root {
+  --color-pale-blue: hsl(225, 100%, 94%);
+  --color-bright-blue: hsl(245, 75%, 52%);
+  --sh-bright-blue-light: hsl(245, 83%, 65%);
+  --color-pale-blue_light: hsl(225, 100%, 98%);
+  --color-desaturated-blue: hsl(224, 23%, 55%);
+  --color-dark-blue: hsl(223, 47%, 23%);
+  --vertical-spacing: 2.4rem;
+  --bd-radius_default: 2rem;
+  --horizontal-spacing: 3.2rem;
+  --color-bright-blue-2: hsl(258, 100%, 97%);
+}
+
+
+/*Global reset*/
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 1.6rem;
+}
+
+.heading-secondary {
+  font-size: 1.6rem;
+}
+
+.primary-heading {
+  text-align: center;
+  font-size: 2.4rem;
+
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  background-color: var(--color-pale-blue);
+
+}
+
+main::before{
+  content: "";
+  width: 100%;
+  height: 50%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("./images/pattern-background-mobile.svg") left / 80% 100% repeat-x ;
+  z-index: 0;
+
+}
+
+.order-card {
+  max-width: 27rem;
+  height: min-content;
+
+  border-radius: var(--bd-radius_default);
+  background-color: white ;
+
+  z-index: 2;
+}
+
+.order-card > * {
+  ;
+  margin-bottom: var(--vertical-spacing);
+}
+
+.order-img--hero {
+  width: 100%;
+  border-radius: var(--bd-radius_default) var(--bd-radius_default) 0 0;
+}
+
+
+.order-info {
+  text-align: center;
+  text-indent: 1rem;
+}
+
+.plan-container {
+  max-width: calc(100% - var(--horizontal-spacing));
+  margin: 0 auto var(--horizontal-spacing);
+
+  padding: 2rem  1rem ;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  background-color:var(--color-pale-blue_light);
+  border-radius: calc(var(--bd-radius_default) * 0.75);
+}
+
+.plan-container > h2 {
+  display: inline-block;
+}
+
+.plan-info > span{
+  color: var(--color-desaturated-blue);
+  font-size: 1.4rem;
+}
+
+
+.btn:link, .btn:visited{
+  display: block;
+  max-width: calc(100% - var(--horizontal-spacing)) ;
+  margin: 0 auto var(--horizontal-spacing);
+  text-align: center;
+  text-decoration: none;
+  transition:all  0.5s ease-in ;
+}
+
+.btn-cta{
+  padding: 1.4rem 0;
+  border-radius: calc(var(--bd-radius_default) * 0.5);
+  background-color: var(--color-bright-blue);
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 2px 4px 4px var(--color-bright-blue-2);
+}
+
+.btn-cta:hover, .btn-cta:active{
+  background-color: var(--sh-bright-blue-light);
+  transform: translateY(-4px);
+}
+
+.btn-cancel{
+  color: var(--color-desaturated-blue);
+  font-weight: 900;
+}
+
+.btn-cancel:hover, .btn-cancel:active{
+  color: var(--color-dark-blue);
+}
+
+.btn-plain:link, .btn-plain:visited{
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in;
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-bright-blue);
+}
+
+.btn-plain:hover, .btn-plain:active{
+  border-bottom-color: transparent ;
+}
+
+@media (min-width: 375px){
+
+  main::before{
+    background-image: url("./images/pattern-background-desktop.svg");
+  }
+
+  .order-card{
+    max-width: 35rem;
+  }
+}
+
+footer  {
+  text-align: center;
+  background-color:var(--color-pale-blue);
+}
+
+footer > a {
+  text-decoration: none;
+  color: var(--color-desaturated-blue);
+}

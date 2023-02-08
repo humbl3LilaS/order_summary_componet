@@ -13,7 +13,7 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
 - [Author](#author)
 
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+
 
 ## Overview
 
@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub Solution](https://github.com/humbl3lalis/order_summary_componet.git)
+- Live Site URL: [Live Deployment via Vercel](https://order-summary-componet.vercel.app/)
 
 ## My process
 
